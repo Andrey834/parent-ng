@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <button mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with menu icon"
+          [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/persons">Родители</button>
+    <button mat-menu-item>Дети</button>
+  </mat-menu>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button *ngIf="!isLogged"
+          mat-icon-button
+          class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon"
+          routerLink="/login">
+    <mat-icon>login</mat-icon>
+  </button>
+  <h2 *ngIf="isLogged">{{person?.firstName}} {{person?.lastName}}</h2>
+  <button *ngIf="isLogged"
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with share icon"
+          routerLink="/person">
+    <mat-icon>person</mat-icon>
+  </button>
+  <button *ngIf="isLogged"
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with share icon"
+          (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

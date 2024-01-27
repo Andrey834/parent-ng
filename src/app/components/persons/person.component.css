@@ -1,0 +1,29 @@
+.card{
+  text-align: left;
+  margin: 10px auto;
+  width: 200px;
+  height: 150px;
+  background-color: #b9a1de;
+  border-radius: 5px;
+  padding-top: 10px;
+  border: black 1px solid;
+  box-shadow: 3px 3px 2px black;
+}
+
+p {
+  margin-left: 10%;
+  font-weight: 600;
+}
+
+.cards {
+  background-color: #61adcc;
+  max-height: fit-content;
+  display: flex;
+  flex: 0 0 33.333333%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  overflow-y: auto;
+  height: 85%;
+  order: inherit;
+}
